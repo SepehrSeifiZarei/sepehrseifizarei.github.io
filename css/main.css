@@ -10,23 +10,23 @@
 
 
 /* Light Theme */
-.light-theme {
+/* .light-theme {
   --background-color: #ffffff;
   --text-color: #000000;
   --container-background-color: #f0f0f0;
   --container-text-color: #000000;
-}
+} */
 
 /* Dark Theme */
-.dark-theme {
+/* .dark-theme {
   --background-color: #000000;
   --text-color: #eaa0a0;
   --container-background-color: #333333;
   --container-text-color: #889feb;
-}
+} */
 
 /* Apply theme variables */
-body {
+/* body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -34,7 +34,7 @@ body {
 .container {
   background-color: var(--container-background-color);
   color: var(--container-text-color);
-}
+} */
 
 
 .bootstrap-switch {
