@@ -9,16 +9,31 @@
  */
 
 
-/* Default light theme */
-body.light-theme {
-  background-color: white;
-  color: black;
+/* Light Theme */
+.light-theme {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --container-background-color: #f0f0f0;
+  --container-text-color: #000000;
 }
 
-/* Dark theme */
-body.dark-theme {
-  background-color: black;
-  color: white;
+/* Dark Theme */
+.dark-theme {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --container-background-color: #333333;
+  --container-text-color: #ffffff;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  background-color: var(--container-background-color);
+  color: var(--container-text-color);
 }
 
 
