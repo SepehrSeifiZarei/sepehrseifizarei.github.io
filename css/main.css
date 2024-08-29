@@ -11,14 +11,14 @@
 
 /* Dark Theme Styles */
 body.light-theme, body.light-theme * {
-  background-color: white;
+  background-color: rgb(186, 224, 153);
   color: black;
 }
 
 /* Dark theme */
 body.dark-theme, body.dark-theme * {
-  background-color: black;
-  color: white;
+  background-color: rgb(61, 52, 52);
+  color: rgb(234, 159, 159);
 }
 
 
