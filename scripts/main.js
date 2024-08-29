@@ -1,6 +1,24 @@
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
 
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.getElementById('theme-toggle'); // Finds the toggle button
+  const html = document.documentElement; // Targets the <html> element for theme toggling
+
+  // Check if there's a saved theme in localStorage; if not, default to 'dark'
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', savedTheme); // Sets the theme based on the saved value
+
+  // Add an event listener to the button to toggle the theme
+  toggleButton.addEventListener('click', function () {
+      // Get the current theme and switch it
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme); // Set the new theme
+      localStorage.setItem('theme', newTheme); // Save the new theme preference in localStorage
+  });
+});
+
 $(document).ready(function() {
   AOS.init( {
     // uncomment below for on-scroll animations to played only once

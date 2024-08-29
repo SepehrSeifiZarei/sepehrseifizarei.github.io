@@ -9,17 +9,26 @@
  */
 
 
-/* Default light theme */
-body.light-theme {
-  background-color: white;
-  color: black;
+/* Dark Theme Styles */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  /* Add more custom properties as needed */
 }
 
-/* Dark theme */
-body.dark-theme {
-  background-color: black;
-  color: white;
+/* Light Theme Styles */
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  /* Add more custom properties as needed */
 }
+
+/* Apply the custom properties */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 
 
 .bootstrap-switch {
