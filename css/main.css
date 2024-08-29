@@ -20,9 +20,9 @@
 /* Dark Theme */
 .dark-theme {
   --background-color: #000000;
-  --text-color: #ffffff;
+  --text-color: #eaa0a0;
   --container-background-color: #333333;
-  --container-text-color: #ffffff;
+  --container-text-color: #889feb;
 }
 
 /* Apply theme variables */
