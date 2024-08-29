@@ -9,18 +9,17 @@
  */
 
 
-/* Dark Theme Styles */
-body.light-theme, body.light-theme * {
-  background-color: rgb(186, 224, 153);
+/* Default light theme */
+body.light-theme {
+  background-color: white;
   color: black;
 }
 
 /* Dark theme */
-body.dark-theme, body.dark-theme * {
-  background-color: rgb(61, 52, 52);
-  color: rgb(234, 159, 159);
+body.dark-theme {
+  background-color: black;
+  color: white;
 }
-
 
 
 .bootstrap-switch {
@@ -2011,7 +2010,7 @@ textarea.form-control {
   .progress-container ~ .progress-container {
     margin-top: 15px; }
   .progress-container .progress-badge {
-    color: #8b7e7e;
+    color: #888;
     font-size: 0.8571em;
     text-transform: uppercase; }
   .progress-container .progress {
