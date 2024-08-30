@@ -3808,7 +3808,7 @@ Created using IcoMoon - icomoon.io
   background-position: center center;
   background-size: cover; }
 
-  .page-header #particles-js {
+  .page-header .page-header-particles-js {
     position: absolute;
     top: 0;
     left: 0;
