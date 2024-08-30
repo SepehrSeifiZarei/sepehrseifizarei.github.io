@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         type: "polygon",
         stroke: { width: 0, color: "#000000" },
         polygon: { nb_sides: 5 },
-        image: { src: "files/stacked-peaks.png", width: 100, height: 100 }
+        image: { src: "images/graphic-design-3.jpg", width: 100, height: 100 }
       },
       opacity: {
         value: 0.5,
