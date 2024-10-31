@@ -875,6 +875,36 @@
       return parsed;
     }
 
+    // Function to handle case 0xA1 and parse blood-related data
+    function handleBloodData(data) {
+      const bloodValue = int16((data[2] << 8) | data[3]);
+      const max1 = data[5];
+      const max2 = data[7];
+      const max3 = data[9];
+      const heartRateRaw = int16((data[2] << 8) | data[3]);
+      const heartRateMax = int16((data[4] << 8) | data[5]);
+      const heartRateMin = int16((data[6] << 8) | data[7]);
+      const heartRateDiff = int16((data[8] << 8) | data[9]);
+
+      const parsedData = {
+        timestamp: new Date().toISOString(),
+        bloodValue,
+        max1,
+        max2,
+        max3,
+        heartRateRaw,
+        heartRateMax,
+        heartRateMin,
+        heartRateDiff
+      };
+
+      if (isCollecting) {
+        dataCollection.push(parsedData);
+      }
+
+      addLog(`Parsed Data - Blood: ${bloodValue}, Max1: ${max1}, Max2: ${max2}, Max3: ${max3}, HR Raw: ${heartRateRaw}, HR Max: ${heartRateMax}, HR Min: ${heartRateMin}, Diff: ${heartRateDiff}`);
+    }
+
     function downloadCSV() {
       if (dataCollection.length === 0) {
         alert("No data to download. Please start a data collection first.");
@@ -882,10 +912,10 @@
       }
       
       let csvContent = "data:text/csv;charset=utf-8,";
-      csvContent += "Timestamp,Type,Acc_X,Acc_Y,Acc_Z,HR,Blood\n";
+      csvContent += "Timestamp,Blood,Max1,Max2,Max3,HR_Raw,HR_Max,HR_Min,HR_Diff\n";
       
       dataCollection.forEach(row => {
-        csvContent += `${row.timestamp},${row.type || ""},${row.acc_x || ""},${row.acc_y || ""},${row.acc_z || ""},${row.hr || ""},${row.blood || ""}\n`;
+        csvContent += `${row.timestamp},${row.bloodValue},${row.max1},${row.max2},${row.max3},${row.heartRateRaw},${row.heartRateMax},${row.heartRateMin},${row.heartRateDiff}\n`;
       });
       
       const encodedUri = encodeURI(csvContent);
@@ -897,6 +927,11 @@
       document.body.removeChild(link);
 
       addLog("Data downloaded as CSV.");
+    }
+
+    // Helper functions for data interpretation
+    function int16(uint16) {
+      return uint16 > 32767 ? uint16 - 65536 : uint16;
     }
   </script>
 
