@@ -803,6 +803,79 @@
   </div>
   <div id="container"></div>
 
+
+  // added part by sepehr
+  <h3>Set Data Collection Time Period</h3>
+  <label for="collectionTime">Collection Duration (seconds):</label>
+  <input type="number" id="collectionTime" min="1" placeholder="Enter duration in seconds">
+  <button type="button" onclick="startDataCollection();">Start Collection</button>
+  <button type="button" onclick="stopDataCollection();">Stop Collection</button>
+  <button type="button" onclick="downloadCSV();">Download Data as CSV</button>
+
+  <script>
+    let dataCollection = [];
+    let collectionInterval;
+    let isCollecting = false;
+
+    function startDataCollection() {
+      const duration = parseInt(document.getElementById('collectionTime').value);
+      if (isNaN(duration) || duration <= 0) {
+        alert("Please enter a valid time period in seconds.");
+        return;
+      }
+      
+      dataCollection = [];
+      isCollecting = true;
+      sendDataArray(hexToBytes("A10404")); // Command to start data collection
+      
+      // Stop data collection after the specified time period
+      collectionInterval = setTimeout(() => {
+        stopDataCollection();
+      }, duration * 1000);
+      
+      addLog("Data collection started for " + duration + " seconds.");
+    }
+
+    function stopDataCollection() {
+      if (!isCollecting) return;
+      clearTimeout(collectionInterval);
+      isCollecting = false;
+      sendDataArray(hexToBytes("A102")); // Command to stop data collection
+      addLog("Data collection stopped.");
+    }
+
+    function handleSettingsNotify(data) {
+      if (isCollecting) {
+        const hexData = bytesToHex(data.buffer);
+        dataCollection.push({ timestamp: new Date().toISOString(), data: hexData });
+      }
+      checkNotifyData(bytesToHex(data.buffer));
+    }
+
+    function downloadCSV() {
+      if (dataCollection.length === 0) {
+        alert("No data to download. Please start a data collection first.");
+        return;
+      }
+      
+      let csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "Timestamp,Data\n";
+      dataCollection.forEach(row => {
+        csvContent += `${row.timestamp},${row.data}\n`;
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "colmi_ring_data.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      addLog("Data downloaded as CSV.");
+    }
+  </script>
+  
 </body>
 
 </html>
