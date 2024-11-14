@@ -912,12 +912,11 @@
       }
       
       let csvContent = "data:text/csv;charset=utf-8,";
-      csvContent += "Timestamp,Blood,Max1,Max2,Max3,HR_Raw,HR_Max,HR_Min,HR_Diff\n";
-      
+      csvContent += "Timestamp,Data\n";
       dataCollection.forEach(row => {
-        csvContent += `${row.timestamp},${row.bloodValue},${row.max1},${row.max2},${row.max3},${row.heartRateRaw},${row.heartRateMax},${row.heartRateMin},${row.heartRateDiff}\n`;
+        csvContent += `${row.timestamp},${row.data}\n`;
       });
-      
+
       const encodedUri = encodeURI(csvContent);
       const link = document.createElement("a");
       link.setAttribute("href", encodedUri);
