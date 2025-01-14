@@ -1228,6 +1228,15 @@ canvas{ display: block; vertical-align: bottom; }
   .navbar .navbar-nav > a.btn.dropdown-toggle {
     box-shadow: none;
     outline: 0 !important; }
+  .circle-icon {
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    width: 60px; /* Adjust to match your desired circle size */
+    height: 60px; /* Same as width to ensure a circle */
+    border-radius: 50%; /* Makes the element circular */
+    background-color: #f5f5f5; /* Optional: Background color for the circle */
+  }
   .btn.btn-icon,
   .navbar .navbar-nav > a.btn.btn-icon {
     height: 2.375rem;
