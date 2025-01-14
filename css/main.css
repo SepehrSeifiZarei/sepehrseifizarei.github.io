@@ -1236,7 +1236,7 @@ canvas{ display: block; vertical-align: bottom; }
     width: 60px; /* Ensure consistency */
     height: 60px;
     border-radius: 50%; /* Keep circular shape */
-    /* background-color: #f5f5f5; */
+    background-color: #5a5959;
     margin: 5px; /* Adjust spacing between buttons */
   }
   
