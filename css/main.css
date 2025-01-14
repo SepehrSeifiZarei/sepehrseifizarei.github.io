@@ -1229,14 +1229,19 @@ canvas{ display: block; vertical-align: bottom; }
     box-shadow: none;
     outline: 0 !important; }
   .circle-icon {
-    display: flex; /* Flexbox for centering */
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    width: 60px; /* Adjust to match your desired circle size */
-    height: 60px; /* Same as width to ensure a circle */
-    border-radius: 50%; /* Makes the element circular */
-    background-color: #f5f5f5; /* Optional: Background color for the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Ensure consistency with other buttons */
+    height: 60px; /* Same as width to create a circle */
+    border-radius: 50%;
+    background-color: #f5f5f5; /* Optional background color */
   }
+  .google-scholar-icon {
+    width: 30px; /* Adjust to the same size as the .fa icons */
+    height: 30px; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }  
   .btn.btn-icon,
   .navbar .navbar-nav > a.btn.btn-icon {
     height: 2.375rem;
