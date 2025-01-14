@@ -4615,6 +4615,27 @@ Created using IcoMoon - icomoon.io
     text-align: right; }
   .section-nucleo-icons .icons-container {
     margin-top: 65px; }
+    /* Ensure fa-brands inherits the fa settings */
+  .fa-brands {
+    display: inline-block;
+    font-family: "Font Awesome 5 Brands"; /* Ensure the font family is applied */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Optional: Add specific settings for fa-google-scholar if needed */
+  .fa-google-scholar {
+    font-size: inherit; /* Matches the size of other Font Awesome icons */
+    color: inherit; /* Ensures it inherits the current text color */
+    width: 1em; /* Ensures proportional sizing */
+    height: 1em;
+    text-align: center;
+  }
   .navbar-nav .nav-link i.fa,
   .navbar-nav .nav-link i.now-ui-icons {
     opacity: .5; }
