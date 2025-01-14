@@ -1241,7 +1241,14 @@ canvas{ display: block; vertical-align: bottom; }
     vertical-align: middle;
     font-size: 24px; /* Match Font Awesome icon size */
   }
-  
+  .btn.btn-icon > i,
+  .btn.btn-icon > .custom-google-scholar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px; /* Adjust icon size if needed */
+      height: 24px;
+  }
   .btn.btn-icon,
   .navbar .navbar-nav > a.btn.btn-icon {
     height: 2.375rem;
