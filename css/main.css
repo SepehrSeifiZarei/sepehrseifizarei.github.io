@@ -1230,20 +1230,16 @@ canvas{ display: block; vertical-align: bottom; }
     box-shadow: none;
     outline: 0 !important; }
 
-  .custom-fa {
+  .custom-google-scholar {
     display: inline-block;
-    font-size: 24px; /* Match Font Awesome icon size */
-    width: 1em;
+    background: url('files/google_scholar_ico.svg') no-repeat center center;
+    background-size: contain;
+    width: 1em; /* Match Font Awesome icon size */
     height: 1em;
     line-height: 1em;
     text-align: center;
-  }
-  
-  .custom-google-scholar {
-    background: url('files/google_scholar_ico.svg') no-repeat center center;
-    background-size: contain; /* Adjust to fit the button */
-    width: 24px; /* Ensure consistency with other icons */
-    height: 24px; /* Match width for square proportions */
+    vertical-align: middle;
+    font-size: 24px; /* Match Font Awesome icon size */
   }
   
   .btn.btn-icon,
