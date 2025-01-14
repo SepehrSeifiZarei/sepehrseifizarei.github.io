@@ -1232,16 +1232,13 @@ canvas{ display: block; vertical-align: bottom; }
 
   .custom-google-scholar {
     display: inline-block;
-    background: url('files/google_scholar_ico.svg') no-repeat center center;
-    background-size: contain;
-    width: 24px; /* Adjust icon size */
-    height: 24px;
-    line-height: 1em;
-    text-align: center;
+    background: url('files/google_scholar_ico.svg') no-repeat center center; /* Center the background */
+    background-size: 50%; /* Scale the background to fit */
+    width: 100%; /* Ensure the icon fills the button area */
+    height: 100%; /* Match the button's height */
+    text-align: center; /* Center any inline content */
+    line-height: 1; /* Avoid extra spacing */
     vertical-align: middle;
-    font-size: 24px; /* Match other icons */
-    border: 1px solid red; /* Debugging border */
-    background-color: yellow; /* Debugging background */
   }
   
   .btn.btn-icon > i,
