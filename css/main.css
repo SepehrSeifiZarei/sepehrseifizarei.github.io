@@ -1234,13 +1234,16 @@ canvas{ display: block; vertical-align: bottom; }
     display: inline-block;
     background: url('files/google_scholar_ico.svg') no-repeat center center;
     background-size: contain;
-    width: 1em; /* Match Font Awesome icon size */
-    height: 1em;
+    width: 24px; /* Adjust icon size */
+    height: 24px;
     line-height: 1em;
     text-align: center;
     vertical-align: middle;
-    font-size: 24px; /* Match Font Awesome icon size */
+    font-size: 24px; /* Match other icons */
+    border: 1px solid red; /* Debugging border */
+    background-color: yellow; /* Debugging background */
   }
+  
   .btn.btn-icon > i,
   .btn.btn-icon > .custom-google-scholar {
       display: flex;
