@@ -1230,15 +1230,21 @@ canvas{ display: block; vertical-align: bottom; }
     box-shadow: none;
     outline: 0 !important; }
 
+  /* Custom Google Scholar Icon */
   .custom-google-scholar {
     display: inline-block;
-    background: url('files/google_scholar_ico.svg') no-repeat center center; /* Center the background */
-    background-size: 50%; /* Scale the background to fit */
-    width: 100%; /* Ensure the icon fills the button area */
-    height: 100%; /* Match the button's height */
-    text-align: center; /* Center any inline content */
-    line-height: 1; /* Avoid extra spacing */
-    vertical-align: middle;
+    position: relative;
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Match width */
+  }
+
+  .custom-google-scholar::before {
+    content: '';
+    display: block;
+    background: url('files/google_scholar_ico.svg') no-repeat center center; /* Use the SVG icon */
+    background-size: contain; /* Ensure the SVG scales properly */
+    width: 100%; /* Occupy the full size of the .custom-google-scholar element */
+    height: 100%;
   }
   
   .btn.btn-icon > i,
