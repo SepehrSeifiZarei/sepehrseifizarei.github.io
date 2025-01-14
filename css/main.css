@@ -1229,6 +1229,18 @@ canvas{ display: block; vertical-align: bottom; }
     box-shadow: none;
     outline: 0 !important; }
 
+  .google-scholar-icon {
+    width: 25px; /* Match size with font-awesome icons */
+    height: 25px;
+    object-fit: contain;
+  }
+  
+  /* Ensure uniformity for all buttons */
+  .btn-icon > i {
+    font-size: 24px; /* Adjust icon size */
+    line-height: 1; /* Align vertically */
+  } 
+
   /* .btn-default.btn-icon {
     display: inline-flex;
     justify-content: center;
@@ -1239,18 +1251,6 @@ canvas{ display: block; vertical-align: bottom; }
     background-color: #5a5959;
     margin: 5px; /* Adjust spacing between buttons */
   } */
-  
-  .google-scholar-icon {
-    width: 30px; /* Match size with font-awesome icons */
-    height: 30px;
-    object-fit: contain;
-  }
-  
-  /* Ensure uniformity for all buttons */
-  .btn-icon > i {
-    font-size: 24px; /* Adjust icon size */
-    line-height: 1; /* Align vertically */
-  } 
 
   .btn.btn-icon,
   .navbar .navbar-nav > a.btn.btn-icon {
