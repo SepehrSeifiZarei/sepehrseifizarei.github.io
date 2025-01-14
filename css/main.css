@@ -48,13 +48,6 @@ canvas{ display: block; vertical-align: bottom; }
 #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
 .count-particles{ border-radius: 0 0 3px 3px; }
 
-.fa-brands-brands {
-  font-family: "Font Awesome 5 Brands"; /* Ensure correct font family */
-  font-size: inherit; /* Match size with fa icons */
-  color: inherit; /* Match color */
-  line-height: inherit; /* Match line height */
-}
-
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
