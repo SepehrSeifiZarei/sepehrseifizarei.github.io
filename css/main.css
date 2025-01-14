@@ -48,6 +48,13 @@ canvas{ display: block; vertical-align: bottom; }
 #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
 .count-particles{ border-radius: 0 0 3px 3px; }
 
+.fa-brands {
+  font-family: "Font Awesome 5 Brands"; /* Ensure correct font family */
+  font-size: inherit; /* Match size with fa icons */
+  color: inherit; /* Match color */
+  line-height: inherit; /* Match line height */
+}
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -4616,26 +4623,6 @@ Created using IcoMoon - icomoon.io
   .section-nucleo-icons .icons-container {
     margin-top: 65px; }
     /* Ensure fa-brands inherits the fa settings */
-  .fa-brands {
-    display: inline-block;
-    font-family: "Font Awesome 5 Brands"; /* Ensure the font family is applied */
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Optional: Add specific settings for fa-google-scholar if needed */
-  .fa-google-scholar {
-    font-size: inherit; /* Matches the size of other Font Awesome icons */
-    color: inherit; /* Ensures it inherits the current text color */
-    width: 1em; /* Ensures proportional sizing */
-    height: 1em;
-    text-align: center;
-  }
   .navbar-nav .nav-link i.fa,
   .navbar-nav .nav-link i.now-ui-icons {
     opacity: .5; }
