@@ -48,7 +48,7 @@ canvas{ display: block; vertical-align: bottom; }
 #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
 .count-particles{ border-radius: 0 0 3px 3px; }
 
-.fa-brands {
+.fa-brands-brands {
   font-family: "Font Awesome 5 Brands"; /* Ensure correct font family */
   font-size: inherit; /* Match size with fa icons */
   color: inherit; /* Match color */
@@ -1263,9 +1263,9 @@ canvas{ display: block; vertical-align: bottom; }
       height: 1.875rem;
       min-width: 1.875rem;
       width: 1.875rem; }
-      .btn.btn-icon.btn-sm i.fa,
+      .btn.btn-icon.btn-sm i.fa-brands,
       .btn.btn-icon.btn-sm i.now-ui-icons,
-      .navbar .navbar-nav > a.btn.btn-icon.btn-sm i.fa,
+      .navbar .navbar-nav > a.btn.btn-icon.btn-sm i.fa-brands,
       .navbar .navbar-nav > a.btn.btn-icon.btn-sm i.now-ui-icons {
         font-size: 0.6875rem; }
     .btn.btn-icon.btn-lg,
@@ -1274,14 +1274,14 @@ canvas{ display: block; vertical-align: bottom; }
       min-width: 3.6rem;
       width: 3.6rem; }
       .btn.btn-icon.btn-lg i.now-ui-icons,
-      .btn.btn-icon.btn-lg i.fa,
+      .btn.btn-icon.btn-lg i.fa-brands,
       .navbar .navbar-nav > a.btn.btn-icon.btn-lg i.now-ui-icons,
-      .navbar .navbar-nav > a.btn.btn-icon.btn-lg i.fa {
+      .navbar .navbar-nav > a.btn.btn-icon.btn-lg i.fa-brands {
         font-size: 1.325rem; }
     .btn.btn-icon:not(.btn-footer) i.now-ui-icons,
-    .btn.btn-icon:not(.btn-footer) i.fa,
+    .btn.btn-icon:not(.btn-footer) i.fa-brands,
     .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) i.now-ui-icons,
-    .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) i.fa {
+    .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) i.fa-brands {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -2563,10 +2563,10 @@ body {
     font-size: 0.7142em;
     padding: 0.5rem 0.7rem;
     line-height: 1.625rem; }
-    .navbar .navbar-nav .nav-link:not(.btn) i.fa + p,
+    .navbar .navbar-nav .nav-link:not(.btn) i.fa-brands + p,
     .navbar .navbar-nav .nav-link:not(.btn) i.now-ui-icons + p {
       margin-left: 5px; }
-    .navbar .navbar-nav .nav-link:not(.btn) i.fa,
+    .navbar .navbar-nav .nav-link:not(.btn) i.fa-brands,
     .navbar .navbar-nav .nav-link:not(.btn) i.now-ui-icons {
       font-size: 18px;
       position: relative;
@@ -2801,7 +2801,7 @@ body {
   .alert strong {
     text-transform: uppercase;
     font-size: 12px; }
-  .alert i.fa,
+  .alert i.fa-brands,
   .alert i.now-ui-icons {
     font-size: 20px; }
   .alert .close {
@@ -4623,7 +4623,7 @@ Created using IcoMoon - icomoon.io
   .section-nucleo-icons .icons-container {
     margin-top: 65px; }
     /* Ensure fa-brands inherits the fa settings */
-  .navbar-nav .nav-link i.fa,
+  .navbar-nav .nav-link i.fa-brands,
   .navbar-nav .nav-link i.now-ui-icons {
     opacity: .5; }
   .section-images {
