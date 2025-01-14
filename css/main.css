@@ -35,6 +35,7 @@
   background-color: var(--container-background-color);
   color: var(--container-text-color);
 } */
+ 
 
 canvas{ display: block; vertical-align: bottom; }
 
@@ -1229,29 +1230,22 @@ canvas{ display: block; vertical-align: bottom; }
     box-shadow: none;
     outline: 0 !important; }
 
-  .google-scholar-icon {
-    width: 25px; /* Match size with font-awesome icons */
-    height: 25px;
-    object-fit: contain;
+  .custom-fa {
+    display: inline-block;
+    font-size: 24px; /* Match Font Awesome icon size */
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
   }
   
-  /* Ensure uniformity for all buttons */
-  .btn-icon > i {
-    font-size: 24px; /* Adjust icon size */
-    line-height: 1; /* Align vertically */
-  } 
-
-  /* .btn-default.btn-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px; /* Ensure consistency */
-    height: 60px;
-    border-radius: 50%; /* Keep circular shape */
-    background-color: #5a5959;
-    margin: 5px; /* Adjust spacing between buttons */
-  } */
-
+  .custom-google-scholar {
+    background: url('files/google_scholar_ico.svg') no-repeat center center;
+    background-size: contain; /* Adjust to fit the button */
+    width: 24px; /* Ensure consistency with other icons */
+    height: 24px; /* Match width for square proportions */
+  }
+  
   .btn.btn-icon,
   .navbar .navbar-nav > a.btn.btn-icon {
     height: 2.375rem;
